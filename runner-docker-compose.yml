@@ -1,0 +1,15 @@
+  runner:
+    image: gitea/act_runner:0.6.1
+    container_name: gitea_runner
+    restart: always
+    depends_on:
+      - gitea
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./gitea/config.yaml:/gitea/config.yaml
+      - ./gitea:/data
+    environment:
+      - CONFIG_FILE=gitea/config.yaml
+      - GITEA_INSTANCE_URL=https://gitea.local.rehomelabs.com # Enter your instance URL
+      - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_TOKEN}
+      - GITEA_RUNNER_NAME=Gitea-Runner # you can name this anything
