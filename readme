@@ -1,5 +1,5 @@
 Here are the list of commands used:
-cd /etc/komodo/stacks/gitea-lab/gitea/gitea 
+cd /etc/komodo/stacks/gitea/gitea/gitea 
 sudo mkdir -p options/gitignore
 cd /options/gitignore
 nano ENV 
