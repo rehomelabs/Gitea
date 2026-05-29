@@ -6,4 +6,4 @@ nano ENV
 # Add below to the ENv file adn save
 *.env
 docker run --entrypoint="" --rm -it docker.io/gitea/act_runner:latest act_runner generate-config > config.yaml
-sudo mv config.yaml /etc/komodo/stacks/gitea-lab/gitea/gitea/
+sudo mv config.yaml /etc/komodo/stacks/gitea/gitea/gitea/
